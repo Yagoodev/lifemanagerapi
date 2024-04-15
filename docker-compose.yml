@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  postgres:
+    image: ubuntu/postgres
+    container_name: lifemanager_db
+    volumes:
+      - lifemanagervolume:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=dev
+      - POSTGRES_PASSWORD=dev1234
+      - POSTGRES_DB=main
+
+volumes:
+  lifemanagervolume:
+
+networks:
+  my-networks:
+    driver: lifemanager_network
