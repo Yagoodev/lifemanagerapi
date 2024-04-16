@@ -20,6 +20,7 @@ public class SecurityConfigurations {
             .authorizeHttpRequests(authorize -> authorize
                     .requestMatchers(HttpMethod.POST, "/users/login").permitAll()
                     .requestMatchers(HttpMethod.POST, "/users/register").permitAll()
+                    .requestMatchers(HttpMethod.POST, "/earnings/salary").permitAll()
             )
             .build();
   }

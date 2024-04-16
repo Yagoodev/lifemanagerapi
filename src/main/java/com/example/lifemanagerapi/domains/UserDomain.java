@@ -19,12 +19,12 @@ import lombok.Data;
 @Table(name = "tb_users")
 @Entity(name = "tb_users")
 @Getter
-public class UsersDomain implements UserDetails {
+public class UserDomain implements UserDetails {
 
-  public UsersDomain() {
+  public UserDomain() {
   }
 
-  public UsersDomain(String username, String name, String password, UserRoles role) {
+  public UserDomain(String username, String name, String password, UserRoles role) {
     this.username = username;
     this.name = name;
     this.password = password;

@@ -1,6 +1,8 @@
 package com.example.lifemanagerapi.earnings.services;
 
+import com.example.lifemanagerapi.earnings.dto.IncomingSalaryDTO;
+
 public interface EarningsService {
-  void setSalary(int value);
+  void setUserSalary(IncomingSalaryDTO data);
 
 }

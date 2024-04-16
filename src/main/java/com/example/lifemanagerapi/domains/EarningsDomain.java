@@ -15,6 +15,15 @@ import java.util.UUID;
 @Entity(name = "tb_earnings")
 public class EarningsDomain {
 
+  public EarningsDomain() {
+  }
+
+  public EarningsDomain(EarningsType type, UserDomain user, int value) {
+    this.type = type;
+    this.userId = user;
+    this.value = value;
+  }
+
   @Id
   @GeneratedValue(strategy = GenerationType.UUID)
   private UUID id;
@@ -29,7 +38,7 @@ public class EarningsDomain {
   private EarningsType type;
 
   @ManyToOne
-  private UsersDomain userId;
+  private UserDomain userId;
 
   @Column
   private int value;

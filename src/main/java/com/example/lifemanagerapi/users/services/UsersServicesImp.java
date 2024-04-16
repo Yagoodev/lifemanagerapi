@@ -1,6 +1,6 @@
 package com.example.lifemanagerapi.users.services;
 
-import com.example.lifemanagerapi.domains.UsersDomain;
+import com.example.lifemanagerapi.domains.UserDomain;
 import com.example.lifemanagerapi.repositories.UsersRepository;
 import com.example.lifemanagerapi.users.dto.LoginUserDTO;
 import com.example.lifemanagerapi.users.dto.RegisterUserDTO;
@@ -30,7 +30,7 @@ public class UsersServicesImp implements UsersServices {
 
     String encryptedPassword = new BCryptPasswordEncoder().encode(data.password());
 
-    UsersDomain user = new UsersDomain(data.username(), data.name(), encryptedPassword, data.role());
+    UserDomain user = new UserDomain(data.username(), data.name(), encryptedPassword, data.role());
 
     this.usersRepository.save(user);
 

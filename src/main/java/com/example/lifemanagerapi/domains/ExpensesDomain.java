@@ -28,5 +28,5 @@ public class ExpensesDomain {
   private ExpensesType type;
 
   @ManyToOne
-  private UsersDomain userId;
+  private UserDomain userId;
 }
